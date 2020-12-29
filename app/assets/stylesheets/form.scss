@@ -1,0 +1,24 @@
+
+label {
+    font-size: 18px;
+}
+
+.field {
+    margin-top: 33px;
+}
+
+input {
+    background: #F4F4F4;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    padding: 9.5px 24px;
+    font-size: 18px;
+
+    &.actions {
+        color: #ffffff;
+        background: #F8BD1C;
+        border-radius: 4px;
+        margin-top: 33px;
+    }
+}
