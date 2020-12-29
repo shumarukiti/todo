@@ -1,0 +1,10 @@
+.container
+  %h2 All Boards
+  - @boards.each do |board|
+    .card
+      .card_name
+        = board.name
+      .card_overview
+        = board.overview
+      .card_user
+        = current_user.email

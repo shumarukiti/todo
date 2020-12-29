@@ -16,4 +16,11 @@
 
 class Board < ApplicationRecord
   belongs_to :user
+
+  validates :name, presence: true
+  validates :name, length: { minimum: 2, maximum: 100 }
+  validates :name, uniqueness: true
+
+  validates :overview, presence: true
+  validates :overview, uniqueness: true
 end
