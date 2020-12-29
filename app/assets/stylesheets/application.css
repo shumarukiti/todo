@@ -45,7 +45,7 @@ html {
   }
   a {
     text-decoration: none;
-    color: $text-base-color;
+    color: initial;
   }
   
   .container {

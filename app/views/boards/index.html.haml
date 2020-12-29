@@ -1,7 +1,7 @@
 .container
   %h2 All Boards
   - @boards.each do |board|
-    .card
+    = link_to board_path(board), class: 'card' do
       .card_name
         = board.name
       .card_btn
