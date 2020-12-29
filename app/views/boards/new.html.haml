@@ -1,11 +1,14 @@
 .container
+  %h2 New Board
   = form_with(model: @board, local: true) do |f|
-    %div
-      = f.label :name, 'Name'
-    %div
-      = f.text_field :name
-    %div
-      = f.label :overview, 'Description'
-    %div
-      = f.text_field :overview
-    = f.submit 'Submit', class: 'btn-primary'
+    .field
+      %div
+        = f.label :name, 'Name'
+      %div
+        = f.text_field :name
+    .field
+      %div
+        = f.label :overview, 'Description'
+      %div
+        = f.text_field :overview, class: 'large'
+      = f.submit 'Submit', class: 'actions_btn'

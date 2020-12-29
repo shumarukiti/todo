@@ -15,7 +15,11 @@ input {
     padding: 9.5px 24px;
     font-size: 18px;
 
-    &.actions {
+    &.large {
+        height: 203px;
+    }
+
+    &.actions_btn {
         color: #ffffff;
         background: #F8BD1C;
         border-radius: 4px;
