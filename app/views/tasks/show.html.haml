@@ -9,3 +9,4 @@
         = image_tag board.user.profile.avatar
       -else
         = image_tag 'damy-profile-img.png'
+  = link_to '削除します',board_task_path(), data: { method: 'delete' }
