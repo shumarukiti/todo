@@ -16,6 +16,8 @@
 
 @import 'header';
 @import 'form';
+@import 'common';
+@import 'card';
 
 html {
     word-spacing: 1px;
@@ -39,10 +41,11 @@ html {
     background-color: $base-bg-color;
     font-size: 1em;
     color: $text-base-color;
+    word-wrap: break-word;
   }
   a {
     text-decoration: none;
-    color: $text-base-color;
+    color: initial;
   }
   
   .container {

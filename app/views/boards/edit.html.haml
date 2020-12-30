@@ -1,0 +1,13 @@
+.container
+  = form_with(model: @board, url: board_path, method: 'put', local: true) do |f|
+    .field
+      %div
+        = f.label :name, 'Name'
+      %div
+        = f.text_field :name
+    .field
+      %div
+        = f.label :overview, 'Description'
+      %div
+        = f.text_field :overview, class: 'large'
+      = f.submit 'Submit', class: 'actions_btn'

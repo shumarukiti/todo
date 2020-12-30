@@ -1,0 +1,19 @@
+.container
+  %h2 All Boards
+  - @boards.each do |board|
+    = link_to board_path(board), class: 'card' do
+      .card_name
+        = board.name
+      .card_btn
+        = image_tag 'doted.png'
+      .card_overview
+        = board.overview
+      .card_user
+        - if board.user.profile && board.user.profile.avatar
+          = image_tag board.user.profile.avatar
+        - else
+          = image_tag 'damy-profile-img.png'
+    = link_to '削除します', board_path(board), data: { method: 'delete'}
+    = link_to '編集します', edit_board_path(board)
+  = link_to new_board_path, class: 'card new' do
+    %p + Add new board
