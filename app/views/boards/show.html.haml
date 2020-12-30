@@ -12,3 +12,5 @@
           = image_tag board.user.profile.avatar
         -else
           = image_tag 'damy-profile-img.png'
+  = link_to new_board_task_path(@board), class: 'card new' do
+    %p + Add new board
