@@ -1,0 +1,13 @@
+.container
+  = form_with(method: @task, url: board_tasks_path, method: 'post', local: true) do |f|
+    .field
+      %div
+        = f.label :title, 'Title'
+      %div
+        = f.text_field :title
+    .field
+      %div
+        = f.label :content, 'Content'
+      %div
+        = f.text_field :content
+      = f.submit 'Submit', class: 'actions_btn'

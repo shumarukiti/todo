@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   root to: "home#index"
 
-  resources :boards
+  resources :boards do
+    resources :tasks
+  end
   resource :profile, only: [:show, :edit, :update]
 end
