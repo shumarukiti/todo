@@ -1,3 +1,14 @@
 .container
-  = @board.name
-  = @board.overview
+  - @tasks.each do |task|
+    = link_to 'リンクだよ', board_task_path(task.board_id, task.id)
+    -# - binding.pry
+    .card
+      .card_name
+        = task.title
+      .card_overview
+        = task.content
+      .card_user
+        - if task.user.profile && task.user.profile.avatar
+          = image_tag board.user.profile.avatar
+        -else
+          = image_tag 'damy-profile-img.png'

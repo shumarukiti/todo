@@ -1,4 +1,9 @@
 class TasksController < ApplicationController
+
+    def show
+        @task = Task.find(params[:id])
+    end
+
     def new
         @task = current_user.tasks.build
     end
