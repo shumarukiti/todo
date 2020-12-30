@@ -1,0 +1,5 @@
+.container
+  - if current_user.profile.avatar.attached?
+    = image_tag current_user.profile.avatar
+  - else
+    %p aaa

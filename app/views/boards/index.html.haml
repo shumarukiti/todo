@@ -9,4 +9,8 @@
       .card_overview
         = board.overview
       .card_user
-        = current_user.email
+        = image_tag board.user.profile.avatar
+  
+  = link_to new_board_path, class: 'card new' do
+    %p + Add new board
+
