@@ -1,0 +1,12 @@
+.container
+  .card
+    .card_name
+      = @task.title
+    .card_overview
+      = @task.content
+    .card_user
+      - if @task.user.profile && @task.user.profile.avatar
+        = image_tag board.user.profile.avatar
+      -else
+        = image_tag 'damy-profile-img.png'
+  = link_to '削除します',board_task_path(), data: { method: 'delete' }
